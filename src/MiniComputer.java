@@ -1,5 +1,4 @@
 import java.util.*;
-import java.time.LocalDateTime;
 
 public class MiniComputer {
 
@@ -20,7 +19,7 @@ public class MiniComputer {
                 if(input.equals("0")) gate = false;
                 if(input.equals("1")) GetLottoTal();
                 if(input.equals("2")) converter();
-                if(input.equals("3")) getTime();
+                if(input.equals("3")) GetTime.getTime();
                 if(input.equals("4")) RNGguess();
                 System.out.println("Press enter when ready to continue...");
                 sc.nextLine();
@@ -48,9 +47,6 @@ public class MiniComputer {
         } else {
             System.out.println("Better luck next time!");
         }
-    }
-    public static void getTime() {
-        System.out.println(LocalDateTime.now());
     }
     public static void converter() {
         System.out.println("Skriv et intenger for minutter : ");
