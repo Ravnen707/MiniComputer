@@ -1,4 +1,5 @@
 import java.util.*;
+import java.time.LocalDateTime;
 
 public class MiniComputer {
 
@@ -10,7 +11,7 @@ public class MiniComputer {
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
-            System.out.println("[programnavn]");
+            System.out.println("4 - getTime");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
@@ -21,9 +22,14 @@ public class MiniComputer {
             System.out.println("What program do you want to run?");
             if(sc.hasNextLine()) {
                 String input = sc.nextLine();
-
                 if(input.equals("0")) gate = false;
+                if(input.equals("4")) getTime();
+                System.out.println("Press enter when ready");
+                input = sc.nextLine();
             } else System.out.println("Input error!");
         }
+    }
+    public static void getTime() {
+        System.out.println(LocalDateTime.now());
     }
 }
