@@ -20,34 +20,13 @@ public class MiniComputer {
                 if(input.equals("1")) GetLottoTal();
                 if(input.equals("2")) converter();
                 if(input.equals("3")) GetTime.getTime();
-                if(input.equals("4")) RNGguess();
+                if(input.equals("4")) RngGuess.rngGuess();
                 System.out.println("Press enter when ready to continue...");
                 sc.nextLine();
             } else System.out.println("Input error!");
         }
     }
-    public static void RNGguess() {
 
-        // importer java.util.random
-        Random rand = new Random();
-
-        //siger hvad nummer den skal være imellem i forhold til et til 10
-        int Numbers = rand.nextInt(10);
-
-        //fortæller tallet der skal gættes imellem. der kan gættes udenfor 1-20, men der er et rigtigt tal mellem 1-20.
-        System.out.println("Guess the number from 1 to 10");
-
-        // tjekker for tallet.
-        String input = sc.nextLine();
-        double RNG = Double.parseDouble(input);
-
-        //ser om tallet er rigtigt eller forkert, og gir svar til givende tal.
-        if (Numbers == RNG) {
-            System.out.println("You got it right!");
-        } else {
-            System.out.println("Better luck next time!");
-        }
-    }
     public static void converter() {
         System.out.println("Skriv et intenger for minutter : ");
         String number = sc.nextLine();
