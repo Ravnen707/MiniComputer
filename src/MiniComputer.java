@@ -1,7 +1,6 @@
 import java.util.*;
 import java.time.LocalDateTime;
 
-
 public class MiniComputer {
 
     static Scanner sc = new Scanner(System.in);
@@ -26,13 +25,10 @@ public class MiniComputer {
                 if(input.equals("0")) gate = false;
                 if(input.equals("2")) converter();
                 if(input.equals("4")) getTime();
-                if (input.equals("5")) RNGguess();
-                System.out.println("Press enter when ready");
-                input = sc.nextLine();
-
+                if(input.equals("5")) RNGguess();
+                System.out.println("Press enter when ready to continue...");
+                sc.nextLine();
             } else System.out.println("Input error!");
-
-
         }
     }
     public static void RNGguess() {
@@ -62,14 +58,14 @@ public class MiniComputer {
         System.out.println(LocalDateTime.now());
     }
     public static void converter() {
-        int Mimuter = sc.nextInt();
+        System.out.println("Skriv et intenger for minutter : ");
+        String number = sc.nextLine();
+        int minutter = Integer.parseInt(number);
 
-        System.out.print("Skriv et intenger for Mimuter : ");
-
-        int Timer = Mimuter / 60;
-        int ResterendeSekunder = Mimuter % 60;
-        System.out.println(Mimuter + " Mimuter er " + Timer +
-                " Timer og " + ResterendeSekunder + " Mimuter");
+        int Timer = minutter / 60;
+        int ResterendeSekunder = minutter % 60;
+        System.out.println(minutter + " minutter er " + Timer +
+                " Timer og " + ResterendeSekunder + " minutter");
     }
     public static void GetLottoTal() {
         int[] tal =  new int[7];
