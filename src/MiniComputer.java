@@ -1,29 +1,29 @@
-package mini_computer;
+import java.util.*;
 
 public class MiniComputer {
 
-    static Scanner sc = new Scanner(system.in);
+    static Scanner sc = new Scanner(System.in);
 
-    public static main(String[] args) {
+    public static void main(String[] args) {
         boolean gate = true;
         while(gate) {
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("[programnavn]");
-            println("0 - Exit");
-            println("What program do you want to run?");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("[programnavn]");
+            System.out.println("0 - Exit");
+            System.out.println("What program do you want to run?");
             if(sc.hasNextLine()) {
                 String input = sc.nextLine();
 
                 if(input.equals("0")) gate = false;
-            } else println("Input error!");
+            } else System.out.println("Input error!");
         }
     }
 }
