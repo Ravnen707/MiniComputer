@@ -10,20 +10,21 @@ public class MiniComputer {
         boolean gate = true;
         while (gate) {
             System.out.println("[programnavn]");
+            System.out.println("2 - Konverter sekunder til timer");
             System.out.println("[programnavn]");
             System.out.println("4 - getTime");
-            System.out.println("[programnavn]");
-            System.out.println("[RNGguess]");
-            System.out.println("[programnavn]");
+            System.out.println("5 - RNGguess");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
             System.out.println("[programnavn]");
             System.out.println("0 - Exit");
+          
             System.out.println("What program do you want to run?");
             if (sc.hasNextLine()) {
                 String input = sc.nextLine();
                 if(input.equals("0")) gate = false;
+                if(input.equals("2")) converter();
                 if(input.equals("4")) getTime();
                 if (input.equals("5")) RNGguess();
                 System.out.println("Press enter when ready");
@@ -58,5 +59,15 @@ public class MiniComputer {
         }
     public static void getTime() {
         System.out.println(LocalDateTime.now());
+    }
+    public static void converter() {
+        int Mimuter = sc.nextInt();
+
+        System.out.print("Skriv et intenger for Mimuter : ");
+
+        int Timer = Mimuter / 60;
+        int ResterendeSekunder = Mimuter % 60;
+        System.out.println(Mimuter + " Mimuter er " + Timer +
+                " Timer og " + ResterendeSekunder + " Mimuter");
     }
 }
