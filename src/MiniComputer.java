@@ -17,7 +17,7 @@ public class MiniComputer {
             if (sc.hasNextLine()) {
                 String input = sc.nextLine();
                 if(input.equals("0")) gate = false;
-                if(input.equals("1")) GetLottoTal();
+                if(input.equals("1")) GetLottoTal.GetLottoTal();
                 if(input.equals("2")) converter();
                 if(input.equals("3")) GetTime.getTime();
                 if(input.equals("4")) RngGuess.rngGuess();
@@ -36,13 +36,5 @@ public class MiniComputer {
         int ResterendeSekunder = minutter % 60;
         System.out.println(minutter + " minutter er " + Timer +
                 " Timer og " + ResterendeSekunder + " minutter");
-    }
-    public static void GetLottoTal() {
-        int[] tal =  new int[7];
-        for (int i = 0; i < 6; i++) {
-            int a = (int)(Math.random() * 101);
-            tal[i] =  a ;
-        }
-        System.out.println( "Lotta tallene er " + tal[0] + " + " + tal[1] + " +  "+ tal[2] +" + "+ tal[3] + " + "+ tal[4] + " + "+ tal[5] + " + "+ tal[6]);
     }
 }
