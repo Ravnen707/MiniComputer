@@ -12,29 +12,20 @@ public class MiniComputer {
             System.out.println("3 - getTime");
             System.out.println("4 - RNGguess");
             System.out.println("0 - Exit");
-          
+
             System.out.println("What program do you want to run?");
             if (sc.hasNextLine()) {
                 String input = sc.nextLine();
-                if(input.equals("0")) gate = false;
-                if(input.equals("1")) GetLottoTal.GetLottoTal();
-                if(input.equals("2")) converter();
-                if(input.equals("3")) GetTime.getTime();
-                if(input.equals("4")) RngGuess.rngGuess();
+                if (input.equals("0")) gate = false;
+                if (input.equals("1")) GetLottoTal.GetLottoTal();
+                if (input.equals("2")) Converter.converter();
+                if (input.equals("3")) GetTime.getTime();
+                if (input.equals("4")) RngGuess.rngGuess();
                 System.out.println("Press enter when ready to continue...");
                 sc.nextLine();
             } else System.out.println("Input error!");
         }
     }
-
-    public static void converter() {
-        System.out.println("Skriv et intenger for minutter : ");
-        String number = sc.nextLine();
-        int minutter = Integer.parseInt(number);
-
-        int Timer = minutter / 60;
-        int ResterendeSekunder = minutter % 60;
-        System.out.println(minutter + " minutter er " + Timer +
-                " Timer og " + ResterendeSekunder + " minutter");
-    }
 }
+
+
